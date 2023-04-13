@@ -1,34 +1,37 @@
 // script.js
 
-const 1-root = document(order1),
-const 1-biscuits: document(biscuits),
-const 1-donuts: document(donuts),
-const 1-pancakes: document(pancakes),
-const 1-status: document(status)
+const root_1 = {
+    biscuits_1: document.querySelector('[data-biscuits="10"]').dataset.biscuits,
+    donuts_1: document.querySelector('[data-donuts="13"]').dataset.donuts,
+    pancakes_1: document.querySelector('[data-pancakes="0"]').dataset.pancakes,
+    status_1: document.querySelector('[data-delivered="false"]').dataset.delivered,
+}
 
-const 2-root = document(order2),
-const 2-biscuits: document(biscuits),
-const 2-donuts: document(donuts),
-const 2-pancakes: document(pancakes),
-const 2-status: document(status)
+const root_2 = {
+    biscuits_2: document.querySelector('[data-biscuits="5"]').dataset.biscuits,
+    donuts_2: document.querySelector('[data-donuts="0"]').dataset.donuts,
+    pancakes_2: document.querySelector('[data-pancakes="2"]').dataset.pancakes,
+    status_2: document.querySelector('[data-delivered="false"]').dataset.delivered,
+}
 
-const 3-root = document(order3),
-const 3-biscuits: document(biscuits),
-const 3-donuts: document(donuts),
-const 3-pancakes: document(pancakes),
-const 3-status: document(status)
+const root_3 = {
+    biscuits_3: document.querySelector('[data-biscuits="12"]').dataset.biscuits,
+    donuts_3: document.querySelector('[data-donuts="11"]').dataset.donuts,
+    pancakes_3: document.querySelector('[data-pancakes="15"]').dataset.pancakes,
+    status_3: document.querySelector('[data-delivered="true"]').dataset.delivered,
+}
 
-1-biscuits= 1-root.biscuits,
-1-donuts = 1-root.donuts,
-1-pancakes = 1-root.pancakes,
-1-status = 1-root.status ? Delivered : Pending
+document.querySelector('[data-key="order1"] > .biscuits > .count').innerHTML = root_1.biscuits_1
+document.querySelector('[data-key="order1"] > .donuts > .count').innerHTML = root_1.donuts_1
+document.querySelector('[data-key="order1"] > .pancakes > .count').innerHTML = root_1.pancakes_1
+document.querySelector('[data-key="order1"] > .status').innerHTML =  root_1.status_1 === 'true'? "Delivered" : "Pending"
 
-2-biscuits= 2-root.biscuits,
-2-donuts = 2-root.donuts,
-2-pancakes = 2-root.pancakes,
-2-status = 2-root.status ? Delivered : Pending
+document.querySelector('[data-key="order2"] > .biscuits > .count').innerHTML = root_2.biscuits_2
+document.querySelector('[data-key="order2"] > .donuts > .count').innerHTML = root_2.donuts_2
+document.querySelector('[data-key="order2"] > .pancakes > .count').innerHTML = root_2.pancakes_2
+document.querySelector('[data-key="order2"] > .status').innerHTML =  root_2.status_2 === 'true'? "Delivered" : "Pending"
 
-3-biscuits= 3-root.biscuits,
-3-donuts = 3-root.donuts,
-3-pancakes = 3-root.pancakes,
-3-status = 3-root.status ? Delivered : Pending
+document.querySelector('[data-key="order3"] > .biscuits > .count').innerHTML = root_3.biscuits_3
+document.querySelector('[data-key="order3"] > .donuts > .count').innerHTML = root_3.donuts_3
+document.querySelector('[data-key="order3"] > .pancakes > .count').innerHTML = root_3.pancakes_3
+document.querySelector('[data-key="order3"] > .status').innerHTML =  root_3.status_3 === 'true'? "Delivered" : "Pending"
