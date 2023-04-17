@@ -26,7 +26,7 @@ const root_3 = {
 document.querySelector('[data-key="order1"] > .biscuits > .count').innerHTML = root_1.biscuits_1
 document.querySelector('[data-key="order1"] > .donuts > .count').innerHTML = root_1.donuts_1
 document.querySelector('[data-key="order1"] > .pancakes > .count').innerHTML = root_1.pancakes_1
-// Used strict equality to check the value and type of root_1.status_1
+// Used strict equality to check the value and type of root_1.status_1. Value is strng because it comes form our HTML Doc
 document.querySelector('[data-key="order1"] > .status').innerHTML =  root_1.status_1 === 'true'? "Delivered" : "Pending"
 
 
