@@ -1,5 +1,6 @@
 // script.js
 
+//Created object of root to store ordered amounts
 const root_1 = {
     biscuits_1: document.querySelector('[data-biscuits="10"]').dataset.biscuits,
     donuts_1: document.querySelector('[data-donuts="13"]').dataset.donuts,
@@ -21,10 +22,13 @@ const root_3 = {
     status_3: document.querySelector('[data-delivered="true"]').dataset.delivered,
 }
 
+// Used query selector and CSS selectors to target the specific HTML elements in order to change the innerHTML of each
 document.querySelector('[data-key="order1"] > .biscuits > .count').innerHTML = root_1.biscuits_1
 document.querySelector('[data-key="order1"] > .donuts > .count').innerHTML = root_1.donuts_1
 document.querySelector('[data-key="order1"] > .pancakes > .count').innerHTML = root_1.pancakes_1
+// Used strict equality to check the value and type of root_1.status_1
 document.querySelector('[data-key="order1"] > .status').innerHTML =  root_1.status_1 === 'true'? "Delivered" : "Pending"
+
 
 document.querySelector('[data-key="order2"] > .biscuits > .count').innerHTML = root_2.biscuits_2
 document.querySelector('[data-key="order2"] > .donuts > .count').innerHTML = root_2.donuts_2
